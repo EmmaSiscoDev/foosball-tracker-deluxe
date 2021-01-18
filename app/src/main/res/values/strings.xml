@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Fooseball Tracker Deluxe</string>
+    <string name="games">Games</string>
+    <string name="leader_board">Leaderboard</string>
+    <string name="player_one">Player One</string>
+    <string name="date">Date</string>
+    <string name="player_two">Player Two</string>
+    <string name="player">Player</string>
+    <string name="games_won">G</string>
+    <string name="games_lost">W</string>
+    <string name="win_percent">W%</string>
+    <string name="goals_scored">GS</string>
+    <string name="goals_allowed">GA</string>
+    <string name="goals_dif">GD</string>
+    <string name="add_game">Add Game</string>
+    <string name="enter_player_one">Enter Player One</string>
+    <string name="enter_player_one_score">Enter Player One Score</string>
+    <string name="enter_player_two">Enter Player Two</string>
+    <string name="enter_player_two_score">Enter Player Two Score</string>
+    <string name="submit">Submit</string>
+    <string name="enter_date">Enter Date</string>
+    <string name="score">Score</string>
+    <string name="date_format">mm/dd/yy</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="are_you_sure">Are you sure you want to delete the game</string>
+</resources>

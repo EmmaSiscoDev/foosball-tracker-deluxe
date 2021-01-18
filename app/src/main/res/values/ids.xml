@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="player_one_name" type="id"/>
+    <item name="player_one_score" type="id"/>
+    <item name="player_two_name" type="id" />
+    <item name="player_two_score" type="id" />
+    <item name="date" type="id" />
+    <item name="player_name" type="id" />
+    <item name="games_played" type="id" />
+    <item name="num_games_won" type="id" />
+    <item name="win_loss_ratio" type="id" />
+    <item name="total_goals_scored" type="id" />
+    <item name="total_goals_against" type="id" />
+    <item name="plus_minus_goals" type="id" />
+    <item name="player_one_title" type="id" />
+    <item name="player_one_edit_text" type="id" />
+    <item name="player_two_title" type="id" />
+    <item name="player_two_name_edit" type="id" />
+    <item name="player_one_score_title" type="id" />
+    <item name="player_one_score_edit_text" type="id" />
+    <item name="player_two_edit_text" type="id" />
+    <item name="player_two_score_title" type="id" />
+    <item name="player_two_score_edit_text" type="id" />
+    <item name="submit_new_game" type="id" />
+    <item name="add_game_date_picker" type="id" />
+    <item name="enter_date_title" type="id" />
+</resources>
