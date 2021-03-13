@@ -1,17 +1,17 @@
 package com.example.fooseballtrackerdeluxe.ui.main
 
 import android.app.AlertDialog
-import android.content.DialogInterface
 import android.os.Bundle
-import android.view.*
-import android.widget.AdapterView.AdapterContextMenuInfo
+import android.view.LayoutInflater
+import android.view.MenuItem
+import android.view.View
+import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.fooseballtrackerdeluxe.R
-import com.example.fooseballtrackerdeluxe.model.Game
-import com.example.fooseballtrackerdeluxe.ui.adapter.GameAdapter
-import kotlinx.android.synthetic.main.games_fragment.*
+import com.example.fooseballtrackerdeluxe.databinding.GamesFragmentBinding
+import com.example.fooseballtrackerdeluxe.ui.adapter.GameRecyclerAdapter
 
 
 class GamesFragment : Fragment() {
@@ -22,35 +22,27 @@ class GamesFragment : Fragment() {
     }
 
     private lateinit var viewModel: MainViewModel
-    private lateinit var gamesAdapter: GameAdapter
+    private lateinit var gamesAdapter: GameRecyclerAdapter
+    private lateinit var gameBinding: GamesFragmentBinding
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View {
-        val rootView = inflater.inflate(R.layout.games_fragment, container, false)
-        return rootView
-    }
-
-    override fun onCreateContextMenu(
-        menu: ContextMenu,
-        v: View,
-        menuInfo: ContextMenu.ContextMenuInfo?
-    ) {
-        menu.add(R.string.delete)
-        menu.add(R.string.edit)
-        super.onCreateContextMenu(menu, v, menuInfo)
-
+        gameBinding = GamesFragmentBinding.inflate(layoutInflater)
+        return gameBinding.root
     }
 
     override fun onContextItemSelected(item: MenuItem): Boolean {
-        val info = item.menuInfo as AdapterContextMenuInfo
 
         when (item.title) {
             getString(R.string.delete) -> {
+                //This is a really simple alert and I build it programmatically
                 AlertDialog.Builder(context)
                     .setTitle(R.string.are_you_sure)
                     .setPositiveButton("Delete") { dialog, which ->
-                        viewModel.deleteGame(gamesAdapter.getItem(info.position - 1) as Game).addOnSuccessListener {
-                            dialog.dismiss()
+                        gamesAdapter.getItem(item.order)?.let {
+                            viewModel.deleteGame(it).addOnSuccessListener {
+                                dialog.dismiss()
+                            }
                         }
                     }
                     .setNegativeButton("Cancel") { dialog, which ->
@@ -58,10 +50,11 @@ class GamesFragment : Fragment() {
                     }.show()
             }
             getString(R.string.edit) -> {
-                AddGameDialogFragment().apply {
-                    setData(gamesAdapter.getItem(info.position - 1) as Game, true)
-                }.show(childFragmentManager, AddGameDialogFragment.TAG)
-
+                //This dialog is more complicated and needs it's own fragment
+                gamesAdapter.getItem(item.order)?.let {
+                    viewModel.editGame(it, true)
+                    AddGameDialogFragment().show(childFragmentManager, AddGameDialogFragment.TAG)
+                }
             }
         }
 
@@ -70,22 +63,13 @@ class GamesFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        context?.let {
-            gamesAdapter = GameAdapter(it)
-        }
-        with(games){
-            val gamesHeaderView = layoutInflater.inflate(R.layout.games_header_view, games,false)
-            addHeaderView(gamesHeaderView)
-            adapter = gamesAdapter
-            registerForContextMenu(this)
-        }
-
-
+            gamesAdapter = GameRecyclerAdapter()
+            gameBinding.games.adapter = gamesAdapter
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
+        viewModel = ViewModelProviders.of(activity!!).get(MainViewModel::class.java)
     }
 
     override fun onResume() {

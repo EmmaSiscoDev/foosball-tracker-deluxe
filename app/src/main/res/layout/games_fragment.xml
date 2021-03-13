@@ -7,15 +7,24 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.GamesFragment">
 
-    <ListView
+    <include
+        android:id="@+id/game_header_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/games_header_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/games"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/rectangle_background"
         android:divider="@null"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toBottomOf="@id/game_header_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--    Player One-->
+    <TextView
+        android:id="@+id/player_one_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:text="@string/enter_player_one"/>
+
+    <EditText
+        android:id="@+id/player_one_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12sp"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/player"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/player_one_score_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:text="@string/enter_player_one_score"
+        />
+
+    <EditText
+        android:id="@+id/player_one_score_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/score"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+    <!--    Player Two-->
+
+    <TextView
+        android:id="@+id/player_two_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:text="@string/enter_player_two_score"
+        />
+
+    <EditText
+        android:id="@+id/player_two_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/player"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/player_two_score_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:text="@string/enter_player_two_score"
+        />
+
+    <EditText
+        android:id="@+id/player_two_score_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/score"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+    <!--    Date -->
+    <TextView
+        android:id="@+id/enter_date_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:text="@string/enter_date"
+        />
+
+    <EditText
+        android:id="@+id/enter_date_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/date"
+        android:importantForAutofill="no"
+        android:inputType="date"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp" />
+
+    <!-- Submit Button-->
+    <Button
+        android:id="@+id/submit_new_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/submit"
+        />
+</LinearLayout>

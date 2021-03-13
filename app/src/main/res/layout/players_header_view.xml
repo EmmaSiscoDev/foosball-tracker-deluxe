@@ -1,23 +1,20 @@
-<LinearLayout android:id="@+id/header_container"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-
     >
 
     <TextView
         android:id="@+id/player_name_header"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="@string/player"
-        android:textColor="@color/colorAccent"
-        android:textSize="16sp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
-        >
+        android:layout_weight="2"
+        android:text="@string/player"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp">
 
     </TextView>
 
@@ -26,13 +23,12 @@
         android:id="@+id/games_won_header"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:layout_weight="1"
         android:text="@string/games_won"
         android:textColor="@color/colorAccent"
-        android:textSize="16sp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        >
+        android:textSize="16sp">
 
     </TextView>
 
@@ -40,26 +36,25 @@
         android:id="@+id/games_lost_header"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:layout_weight="1"
         android:text="@string/games_lost"
         android:textColor="@color/colorAccent"
-        android:textSize="16sp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        >
+        android:textSize="16sp">
 
     </TextView>
+
     <TextView
         android:id="@+id/win_loss_ratio_ratio"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:layout_weight="1"
         android:text="@string/win_percent"
         android:textColor="@color/colorAccent"
-        android:textSize="16sp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        >
+        android:textSize="16sp">
 
     </TextView>
 
@@ -68,13 +63,12 @@
         android:id="@+id/goals_scored_header"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:layout_weight="1"
         android:text="@string/goals_scored"
         android:textColor="@color/colorAccent"
-        android:textSize="16sp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        >
+        android:textSize="16sp">
 
     </TextView>
 
@@ -82,14 +76,13 @@
         android:id="@+id/goals_against_header"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:layout_weight="1"
         android:text="@string/goals_allowed"
         android:textColor="@color/colorAccent"
-        android:textSize="16sp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        >
+        android:textSize="16sp">
 
     </TextView>
 
@@ -97,14 +90,13 @@
         android:id="@+id/plus_minus_goals_header"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:layout_weight="1"
         android:text="@string/goals_dif"
         android:textColor="@color/colorAccent"
-        android:textSize="16sp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        >
+        android:textSize="16sp">
 
     </TextView>
 

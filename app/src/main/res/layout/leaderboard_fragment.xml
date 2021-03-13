@@ -7,14 +7,25 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.LeaderBoardFragment">
 
-    <ListView
+    <include
+        android:id="@+id/player_header_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/players_header_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+    />
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/players"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/rectangle_background"
         android:divider="@null"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/player_header_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

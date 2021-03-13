@@ -1,11 +1,11 @@
 package com.example.fooseballtrackerdeluxe
 
 import android.content.res.Resources
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
@@ -24,8 +24,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(main_toolbar)
     }
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.add_game_menu, menu)
+        menuInflater.inflate(R.menu.add_game_menu, menu)
         return true
     }
 
@@ -41,7 +40,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-
 
 class ViewPagerAdapter(val context: Resources, fm: FragmentManager): FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
     override fun getItem(position: Int): Fragment {
